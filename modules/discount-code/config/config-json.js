@@ -25,8 +25,8 @@ module.exports = function configJSON(req) {
         outArguments: [],
         // Fill in the host with the host that this is running on.
         // It must run under HTTPS
-        //https://${req.headers.host}/modules/discount-code/execute
-        url: `https://jbcustomactivity.herokuapp.com/`,
+        
+        url: `https://${jbcustomactivity.herokuapp.com}/modules/discount-code/execute`,
         // The amount of time we want Journey Builder to wait before cancel the request. Default is 60000, Minimal is 1000
         timeout: 10000,
         // how many retrys if the request failed with 5xx error or network error. default is 0
@@ -39,13 +39,13 @@ module.exports = function configJSON(req) {
     },
     configurationArguments: {
       publish: {
-        url: `https://${req.headers.host}/modules/discount-code/publish`
+        url: `https://${jbcustomactivity.herokuapp.com}/modules/discount-code/publish`
       },
       validate: {
-        url: `https://${req.headers.host}/modules/discount-code/validate`
+        url: `https://${jbcustomactivity.herokuapp.com}/modules/discount-code/validate`
       },
       stop: {
-        url: `https://${req.headers.host}/modules/discount-code/stop`
+        url: `https://${jbcustomactivity.herokuapp.com}/modules/discount-code/stop`
       }
     },
     userInterfaces: {
